@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string
+  slug: string
+  url_image: string
+  songs: string[]
+}
+
+const { title, slug, url_image, songs } = Astro.props
+const className = 
+  slug === 'twenty-one-pilots' ? 'border-green-500 text-green-500' :
+  slug === 'regional-at-best' ? 'border-orange-500 text-orange-500' :
+  slug === 'vessel' ? 'border-blue-800 text-blue-800' :
+  slug === 'blurryface' ? 'border-white text-white' :
+  slug === 'trench' ? 'border-contrast text-contrast' :
+  slug === 'scaled-and-icy' ? 'border-pink-500 text-pink-500' :
+  'border-primary text-primary' //<- Si slug es clancy
+---
+<section class="flex flex-col items-center justify-center py-16">
+  <img 
+    transition:name={`image-${slug}`} 
+    src={url_image} 
+    alt={slug} 
+    class:list={["border-4 rounded-xl w-48 md:w-64 lg:w-96 aspect-square", className]}
+  >
+  <span 
+    transition:name={`name-${slug}`} 
+    class:list={["text-format text-4xl md:text-5xl py-6", className]}
+  >
+    {title}
+  </span>
+  <div>
+    {
+      songs.map((song: string) => (
+        <li class="text-center py-2 px-4 bg-gray-800 rounded-lg hover:bg-gray-700">{song}</li>
+      ))
+    }
+  </div>
+</section>

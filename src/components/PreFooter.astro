@@ -1,0 +1,30 @@
+---
+import MusicRoute from '@components/MusicRoute.astro'
+
+const musicPlatforms = [
+  {
+    name: 'Spotify',
+    url: 'https://open.spotify.com/artist/3YQKmKGau1PzlVlkL1iodx',
+    icon: 'spotify'
+  },
+  {
+    name: 'Apple Music',
+    url: 'https://music.apple.com/us/artist/twenty-one-pilots/349736311',
+    icon: 'apple'
+  },
+  {
+    name: 'YouTube',
+    url: 'https://www.youtube.com/user/twentyonepilots',
+    icon: 'youtube'
+  }
+]
+---
+
+<section class="flex flex-col justify-center items-center py-10 lg:py-20">
+  <span class="text-format text-center text-5xl lg:text-7xl text-contrast py-12" style="transform: rotate(-3deg);">disponible en</span>
+  {
+    musicPlatforms.map(({name, url, icon}, key) => (
+      <MusicRoute name={name} url={url} icon={icon} />
+    ))
+  }
+</section>

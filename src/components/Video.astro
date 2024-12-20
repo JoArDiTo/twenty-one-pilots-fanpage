@@ -1,0 +1,35 @@
+---
+import VideoPlay from '@icons/VideoPlay.astro'
+---
+
+<section class="flex flex-col justify-center items-center py-10 lg:py-20">
+  <span class="text-format text-center text-5xl lg:text-7xl text-contrast py-16 lg:py-24 px-1" style="transform: rotate(-3deg);">lanzamiento de the line</span>
+  <div class="lg:pt-12 w-full max-w-4xl lg:max-w-5xl mx-auto">
+    
+    <div id="preload-image" class="flex justify-center items-center">
+      <button class="absolute transition hover:scale-110" onclick="reproduceVideo()">
+        <VideoPlay class="w-20 lg:w-44" />
+      </button>
+      <img class="w-full aspect-video border-4 border-contrast rounded-lg" src="images/found-video.webp" alt="preload-image">
+    </div>
+
+    <iframe 
+      id="video-clancy"
+      class="w-full hidden aspect-video border-4 border-contrast rounded-lg"
+      src="https://www.youtube.com/embed/E2Rj2gQAyPA?si=N_Opj5Nv9hJowgd3" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+</section>
+
+<script is:inline>
+  function reproduceVideo() {
+    const video = document.getElementById('video-clancy')
+    const preVideo = document.getElementById('preload-image')
+    preVideo.style.display = 'none'
+    video.style.display = 'block'
+    video.src += '?autoplay=1'
+  }
+</script>

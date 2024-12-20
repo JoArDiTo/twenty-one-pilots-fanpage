@@ -1,0 +1,398 @@
+{
+  "disks":[
+    {
+        "id": 1,
+        "slug": "twenty-one-pilots",
+        "name": "twenty one pilots",
+        "url_spotify": "https://open.spotify.com/album/1Fexc96V24RL17Ko9VXUOM?si=dAQ1E-D3QImvFVY5VY5FtQ",
+        "url_image": "/images/disks/top.webp",
+        "songs":[
+            "Implicit Demand for Proof",
+            "Fall Away",
+            "The Pantaloon",
+            "Addict with a Pen",
+            "Friend, Please",
+            "March to the Sea",
+            "Johnny Boy",
+            "Oh Ms Believer",
+            "Air Catcher",
+            "Trapdoor",
+            "A Car, a Torch, a Death",
+            "Taxi Cab",
+            "Before You Start Your Day",
+            "Isle of Flightless Birds"
+        ]
+    },
+    {
+        "id": 2,
+        "slug": "regional-at-best",
+        "name": "regional at best",
+        "url_spotify": "https://open.spotify.com/playlist/5VSyNj9ZA7Mw9LB1BUuqUR?si=70d332bc85b54ec8",
+        "url_image": "/images/disks/regional.webp",
+        "songs":[
+            "Glowing Eyes",
+            "Ruby",
+            "Forest",
+            "Lovely",
+            "Kitchen Sink",
+            "Anathema",
+            "Be Concerned",
+            "Slowtown",
+            "Clear"
+        ]
+    },
+    {
+        "id": 3,
+        "slug": "vessel",
+        "name": "vessel",
+        "url_spotify": "https://open.spotify.com/intl-es/album/2r2r78NE05YjyHyVbVgqFn?si=j12oDuyFRKanEXhgtXaH_A",
+        "url_image": "/images/disks/vessel.webp",
+        "songs":[
+            "Ode to Sleep",
+            "Holding on to You",
+            "Migraine",
+            "House of Gold",
+            "Car Radio",
+            "Semi-Automatic",
+            "Screen",
+            "The Run and Go",
+            "Fake You Out",
+            "Guns for Hands",
+            "Trees",
+            "Truce"
+        ]
+    },
+    {
+        "id": 4,
+        "slug": "blurryface",
+        "name": "blurryface",
+        "url_spotify": "https://open.spotify.com/intl-es/album/3cQO7jp5S9qLBoIVtbkSM1?si=XJ8L5mG5TlaOYowjYK670Q",
+        "url_image": "/images/disks/blurryface.webp",
+        "songs":[
+            "Heavydirtysoul",
+            "Stressed Out",
+            "Ride",
+            "Fairly Local",
+            "Tear in My Heart",
+            "Lane Boy",
+            "The Judge",
+            "Doubt",
+            "Polarize",
+            "We Don't Believe What's on TV",
+            "Message Man",
+            "Hometown",
+            "Not Today",
+            "Goner"
+        ]
+    },
+    {
+        "id": 5,
+        "slug": "trench",
+        "name": "trench",
+        "url_spotify": "https://open.spotify.com/intl-es/album/621cXqrTSSJi1WqDMSLmbL?si=WWWXsP89T4-zCblZMtxJrQ",
+        "url_image": "/images/disks/trench.webp",
+        "songs":[
+            "Jumpsuit",
+            "Levitate",
+            "Morph",
+            "My Blood",
+            "Chlorine",
+            "Smithereens",
+            "Neon Gravestones",
+            "The Hype",
+            "Nico and the Niners",
+            "Cut My Lip",
+            "Bandito",
+            "Pet Cheetah",
+            "Legend",
+            "Leave the City"
+        ]
+    },
+    {
+        "id": 6,
+        "slug": "scaled-and-icy",
+        "name": "scaled and icy",
+        "url_spotify": "https://open.spotify.com/album/0Q5XBpCYFgUWiG9DUWyAmJ?si=nKEQZjkyQn-KJ6d6ajUtYA",
+        "url_image": "/images/disks/scaled.webp",
+        "songs":[
+            "Good Day",
+            "Choker",
+            "Shy Away",
+            "The Outside",
+            "Saturday",
+            "Never Take It",
+            "Mulberry Street",
+            "Formidable",
+            "Bounce Man",
+            "No Chances",
+            "Redecorate"
+        ]
+    },
+    {
+        "id": 7,
+        "slug": "clancy",
+        "name": "clancy",
+        "url_spotify": "https://open.spotify.com/intl-es/album/7aeIwIg63Qyt1bzjsPufzl?si=08DbPTGNTe2JH7wC7j3upA",
+        "url_image": "/images/disks/clancy.webp",
+        "songs":[
+            "Overcompensate",
+            "Next Semester",
+            "Backslide",
+            "Midwest Indigo",
+            "Routines In The Night",
+            "Vignette",
+            "The Craving (Jenna's version)",
+            "Lavish",
+            "Navigating",
+            "Snap Back",
+            "Oldies Station",
+            "At The Risk Of Feeling Dumb",
+            "Paladin Strait"
+        ]
+    }
+  ],
+  "singles":[
+    {
+        "id": 1,
+        "name": "heathens",
+        "url_image": "/images/singles/heathens.webp",
+        "url_spotify": "https://open.spotify.com/intl-es/track/6i0V12jOa3mr6uu4WYhUBr?si=7d3b88c3231e4809"
+    },
+    {
+        "id": 2,
+        "name": "cancer",
+        "url_image": "/images/singles/cancer.webp",
+        "url_spotify": "https://open.spotify.com/intl-es/album/22uQ3YSLjQJPNPkZQzdX2y?si=O1X0WeM9QXqQStWfvXi8qA"
+    },
+    {
+        "id": 3,
+        "name": "level of concern",
+        "url_image": "/images/singles/level.webp",
+        "url_spotify": "https://open.spotify.com/intl-es/track/6xZ4Q2k2ompmDppyeESIY8?si=77d08e3bc82d4b3f"
+    },
+    {
+        "id": 4,
+        "name": "christmas saves the year",
+        "url_image": "/images/singles/christmas.webp",
+        "url_spotify": "https://open.spotify.com/intl-es/album/5bh5kgZddiyd5ObXOP9Exu?si=bDwilThAQwWZC7n2GPVhvw"
+    },
+    {
+        "id": 5,
+        "name": "the line",
+        "url_image": "/images/singles/the-line.webp",
+        "url_spotify": "https://open.spotify.com/intl-es/album/4aE8ZrEif8MgWvFNIbz8I6?si=Aj4bwDb7T5CYgJAXPfVYgw"
+    }
+  ],
+  "tours":[
+    {
+        "date": "17/11/2024",
+        "site": "Spark Arena",
+        "city": "Auckland, NZL",
+        "region": "OC"
+    },
+    {
+        "date": "19/11/2024",
+        "site": "Rod Laver Arena",
+        "city": "Melbourne, AUS",
+        "region": "OC"
+    },
+    {
+        "date": "21/11/2024",
+        "site": "Brisbane Entertainment Centre",
+        "city": "Brisbane, AUS",
+        "region": "OC"
+    },
+    {
+        "date": "24/11/2024",
+        "site": "Qudos Bank Arena",
+        "city": "Sydney, AUS",
+        "region": "OC"
+    },
+    {
+        "date": "16/01/2025",
+        "site": "Coliseo MedPlus",
+        "city": "Bogotá, COL",
+        "region": "LATAM"
+    },
+    {
+        "date": "19/01/2025",
+        "site": "Estadio Bicentenario La Florida",
+        "city": "Santiago, CHI",
+        "region": "LATAM"
+    },
+    {
+        "date": "22/01/2025",
+        "site": "Pedreira Paulo Leminski",
+        "city": "Curitiba, BRA",
+        "region": "LATAM"
+    },
+    {
+        "date": "24/01/2025",
+        "site": "Farmasi Arena",
+        "city": "Rio de Janeiro, BRA",
+        "region": "LATAM"
+    },
+    {
+        "date": "26/01/2025",
+        "site": "Allianz Parque",
+        "city": "São Paulo, BRA",
+        "region": "LATAM"
+    },
+    {
+        "date": "29/01/2025",
+        "site": "Movistar Arena",
+        "city": "Buenos Aires, ARG",
+        "region": "LATAM"
+    },
+    {
+        "date": "20/02/2025",
+        "site": "Estadio GNP Seguros",
+        "city": "Ciudad de México, MEX",
+        "region": "LATAM"
+    },
+    {
+        "date": "22/02/2025",
+        "site": "Estadio 3 de Marzo",
+        "city": "Guadalajara, MEX",
+        "region": "LATAM"
+    },
+    {
+        "date": "24/02/2025",
+        "site": "Estadio Banorte",
+        "city": "Monterrey, MEX",
+        "region": "LATAM"
+    },
+    {
+        "date": "07/04/2025",
+        "site": "Barclays Arena",
+        "city": "Hamburgo, ALE",
+        "region": "EU"
+    },
+    {
+        "date": "08/04/2025",
+        "site": "Uber Arena",
+        "city": "Berlín, ALE",
+        "region": "EU"
+    },
+    {
+        "date": "09/04/2025",
+        "site": "Atlas Arena",
+        "city": "Lodz, POL",
+        "region": "EU"
+    },
+    {
+        "date": "12/04/2025",
+        "site": "O2 Arena",
+        "city": "Praga, CZE",
+        "region": "EU"
+    },
+    {
+        "date": "13/04/2025",
+        "site": "Wiener Stadthalle",
+        "city": "Vienna, AUT",
+        "region": "EU"
+    },
+    {
+        "date": "16/04/2025",
+        "site": "Hallenstadion",
+        "city": "Zúrich, SUI",
+        "region": "EU"
+    },
+    {
+        "date": "17/04/2025",
+        "site": "Unipol Arena",
+        "city": "Bolonia, ITA",
+        "region": "EU"
+    },
+    {
+        "date": "21/04/2025",
+        "site": "WiZink Center",
+        "city": "Madrid, ESP",
+        "region": "EU"
+    },
+    {
+        "date": "22/04/2025",
+        "site": "Palau San Jordi",
+        "city": "Barcelona, ESP",
+        "region": "EU"
+    },
+    {
+        "date": "24/04/2025",
+        "site": "LDLC Arena",
+        "city": "Lyon, FRA",
+        "region": "EU"
+    },
+    {
+        "date": "27/04/2025",
+        "site": "Olympiahalle",
+        "city": "Múnich, ALE",
+        "region": "EU"
+    },
+    {
+        "date": "28/04/2025",
+        "site": "Forum",
+        "city": "Milan, ITA",
+        "region": "EU"
+    },
+    {
+        "date": "30/04/2025",
+        "site": "Ziggo Dome",
+        "city": "Amsterdam, HOL",
+        "region": "EU"
+    },
+    {
+        "date": "01/05/2025",
+        "site": "Lanxess Arena",
+        "city": "Colonia, ALE",
+        "region": "EU"
+    },
+    {
+        "date": "02/05/2025",
+        "site": "Accor Arena",
+        "city": "París, FRA",
+        "region": "EU"
+    },
+    {
+        "date": "05/05/2025",
+        "site": "OVO Hydro",
+        "city": "Glasgow, SCO",
+        "region": "EU"
+    },
+    {
+        "date": "06/05/2025",
+        "site": "Resorts World Arena",
+        "city": "Birmingham, ENG",
+        "region": "EU"
+    },
+    {
+        "date": "08/05/2025",
+        "site": "SSE Arena Belfast",
+        "city": "Belfast, NIR",
+        "region": "EU"
+    },
+    {
+        "date": "09/05/2025",
+        "site": "3Arena",
+        "city": "Dublín, IRL",
+        "region": "EU"
+    },
+    {
+        "date": "11/05/2025",
+        "site": "AO Arena",
+        "city": "Manchester, ENG",
+        "region": "EU"
+    },
+    {
+        "date": "13/05/2025",
+        "site": "The O2",
+        "city": "Londres, ENG",
+        "region": "EU"
+    },
+    {
+        "date": "14/05/2025",
+        "site": "The O2",
+        "city": "Londres, ENG",
+        "region": "EU"
+    }
+  ]
+}

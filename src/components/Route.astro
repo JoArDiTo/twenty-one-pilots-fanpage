@@ -1,0 +1,19 @@
+---
+interface Props {
+	name: string
+  href: string
+  target?: string
+}
+
+const { name, href, target } = Astro.props
+const currentRoute = Astro.url.pathname
+const className = currentRoute === href ? 'bg-contrast' : 'hidden'
+---
+<a 
+  class="py-6 min-w-36 text-center font-semibold hover:bg-zinc-800 transition" 
+  href={href} 
+  target={target}
+  >
+  <div transition:name="nav-current" class:list={["absolute top-0 h-2 min-w-36", className]}></div>
+  <span class="w-full text-xl px-2">{name}</span>
+</a>

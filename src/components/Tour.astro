@@ -1,0 +1,23 @@
+---
+interface Props {
+  date: string
+  site: string
+  city: string
+  region: string
+}
+
+const { date, site, city, region } = Astro.props
+
+const className =  
+  region === 'OC' ? 'bg-green-500' :
+  region === 'LATAM' ? 'bg-blue-500' : 'bg-black' //<- Si region es EUROPA
+---
+
+<div class="flex flex-col justify-between bg-primary rounded-xl shadow-md p-3 h-28 w-40 lg:w-96 lg:h-56">
+  <div class="flex justify-between items-center">
+    <span class="font-semibold text-xs text-contrast lg:text-xl" >{date}</span>
+    <span class:list={["font-semibold text-[10px] px-3 py-1 rounded-xl lg:text-lg", className]}>{region}</span>
+  </div>
+  <div class=`font-semibold tracking-tight text-contrast ${site.length <= 24 ? 'text-md' : 'text-xs'} lg:text-4xl`>{site}</div>
+  <div class="text-xs font-bold text-top-black lg:text-2xl">{city}</div>
+</div>

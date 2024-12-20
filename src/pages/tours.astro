@@ -1,0 +1,79 @@
+---
+import Tour from '@components/Tour.astro'
+import Layout from '@layouts/Layout.astro'
+import { tours } from '@mocks/data.json'
+
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+interface Tour {
+  date: string
+  site: string
+  city: string
+  region: string
+}
+
+function formatDate(date: string){
+  const [day, month, year] = date.split('/')
+  return `${MONTHS[parseInt(month) - 1]} ${day}, ${year}`
+}
+
+function getConcertsToCome(tours: Tour[]) {
+  const today = new Date()
+  const upcomingTour = tours.filter(({ date }) => {
+    const [day, month, year] = date.split('/')
+    const tourDate = new Date(`${year}-${month}-${day}`)
+    return tourDate >= today
+  })
+  return upcomingTour
+}
+
+function getConcertPassed(tours: Tour[]) {
+  const today = new Date()
+  const passedTours = tours.filter(({ date }) => {
+    const [day, month, year] = date.split('/')
+    const tourDate = new Date(`${year}-${month}-${day}T23:59:59`)
+    return tourDate < today
+  })
+
+  return passedTours
+}
+
+const toursToCome = getConcertsToCome(tours)
+const currenttourToCome = toursToCome[0]
+
+const toursPassed = getConcertPassed(tours)
+---
+<Layout title="Twenty One Pilots FanPage">
+  <div class="flex flex-col items-center justify-center pt-16">
+    <span class="text-format text-primary text-center pb-16 text-5xl lg:text-7xl" style="transform: rotate(-4deg);">clancy<br>world tour</span>
+    <h2 class="text-format text-white text-center py-8 lg:py-16 text-3xl lg:text-5xl">siguiente concierto</h2>
+    <div class="scale-150 py-6 lg:py-12">
+      {
+        <Tour 
+          date={formatDate(currenttourToCome.date)}
+          site={currenttourToCome.site}
+          city={currenttourToCome.city}
+          region={currenttourToCome.region}
+        />
+      }
+    </div>
+
+    <h2 class="text-format text-white text-center pt-20 py-8 text-3xl lg:text-5xl">próximos conciertos</h2>
+    <div class="grid grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-12 max-w-7xl pb-20">
+      {
+        toursToCome.slice(1).map(({ date, site, city, region }) => (
+          <Tour date={formatDate(date)} site={site} city={city} region={region} />
+        ))
+      }
+    </div>
+
+    <h2 class="text-format text-white text-center pb-8 text-3xl lg:text-5xl">conciertos pasados</h2>
+    <div class="grid grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-12 max-w-7xl">
+      {
+        toursPassed.map(({ date, site, city, region }) => (
+          <Tour date={formatDate(date)} site={site} city={city} region={region} />
+        ))
+      }
+    </div>
+  </div>
+</Layout>

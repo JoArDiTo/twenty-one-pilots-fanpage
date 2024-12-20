@@ -1,0 +1,54 @@
+---
+interface Props {
+	slug: string
+  type: string
+  name: string
+  url_image: string
+  url_spotify?: string
+}
+
+const { slug, type, name, url_image, url_spotify } = Astro.props
+
+const className = 
+  slug === 'twenty-one-pilots' ? 'border-green-500 text-green-500' :
+  slug === 'regional-at-best' ? 'border-orange-500 text-orange-500' :
+  slug === 'vessel' ? 'border-blue-800 text-blue-800' :
+  slug === 'blurryface' ? 'border-white text-white' :
+  slug === 'trench' ? 'border-contrast text-contrast' :
+  slug === 'scaled-and-icy' ? 'border-pink-500 text-pink-500' :
+  slug === 'clancy' ? 'border-primary text-primary' :
+  'border-contrast text-white'
+
+const href = type === 'album' ? `disks/${slug}` : url_spotify
+const target = type === 'album' ? '_self' : '_blank'
+---
+
+<div class="flex flex-col lg:flex-row gap-6 items-center">
+  <a href={ href } class:list={["transition hover:scale-105 border-4 rounded-xl", className]} target={target} >
+    <img
+      transition:name=`image-${slug}`
+      class="w-48 md:w-64 lg:w-96 aspect-square rounded-lg"
+      src={url_image}
+      alt={name} />
+  </a>
+  <span transition:name=`name-${slug}` class:list={["pb-8 text-center lg:w-56 text-format text-4xl md:text-5xl", className]}>{name}</span>
+</div>
+
+<style>
+  @keyframes show {
+    from {
+      opacity: 0; scale: 10%;
+    }
+    to {
+      opacity: 1; scale: 100%;
+    }
+  }
+
+  div {
+    view-timeline-name: --reveal;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+  }
+</style>

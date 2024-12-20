@@ -1,0 +1,73 @@
+---
+import Route from '@components/Route.astro'
+import MenuModal from '@components/MenuModal.astro'
+import Logo from '@icons/Logo.astro'
+import Menu from '@icons/Menu.astro'
+import Title from '@icons/Title.astro'
+
+const pages = [
+  {
+    name: 'INICIO',
+    href: '/'
+  },
+  {
+    name: 'DISCOS',
+    href: '/disks'
+  },
+  {
+    name: 'TOURS',
+    href: '/tours'
+  },
+  {
+    name: 'TIENDA OFICIAL',
+    href: 'https://www.twentyonepilots.com/tour',
+    target: "_blank"
+  }
+]
+---
+<header class="w-full border-b-4">
+  <Title class="z-10 scale-110 lg:scale-[1.40] absolute left-1/2 transform -translate-x-1/2 bg-top-black mt-12" />
+  <nav class="hidden lg:flex justify-center items-center">
+    {
+      pages.map(({name, href, target}, key) => (
+        <>
+          <Route name={name} href={href} target={target} />
+          { key === 1 && <div class="w-72 mx-8"></div> }
+        </>
+      ))
+    }
+  </nav>
+  <div class="flex justify-between items-center py-4 px-8 lg:hidden">
+    <Logo />
+    <div id="menu-modal" class="is-not-active fixed inset-0 bg-top-black z-10 overflow-y-auto">
+      <MenuModal pages={pages} />
+    </div>
+    <button id="menu-button" onclick="openMenuModal()">
+      <Menu class="transition hover:scale-110" />
+    </button>
+  </div>
+</header>
+
+<style>
+  header {
+    border-image: linear-gradient(to right, transparent, #ffd800, transparent) 5;
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+
+<script is:inline>
+  function openMenuModal() {
+    const menuModal = document.getElementById('menu-modal')
+    menuModal.classList.replace('is-not-active', 'is-active')
+  }
+</script>

@@ -1,0 +1,58 @@
+---
+import Layout from '@layouts/Layout.astro'
+import { disks } from '@mocks/data.json'
+
+export async function getStaticPaths(){
+  return disks.map((disk) => ({
+    params: { slug: disk.slug },
+    props: disk
+  }))
+}
+
+const disk = Astro.props
+const { slug, name, url_spotify, url_image, songs } = disk
+
+const className = 
+  slug === 'twenty-one-pilots' ? 'border-green-500 text-green-500' :
+  slug === 'regional-at-best' ? 'border-orange-500 text-orange-500' :
+  slug === 'vessel' ? 'border-blue-800 text-blue-800' :
+  slug === 'blurryface' ? 'border-white text-white' :
+  slug === 'trench' ? 'border-contrast text-contrast' :
+  slug === 'scaled-and-icy' ? 'border-pink-500 text-pink-500' :
+  'border-primary text-primary' //<- Si slug es clancy
+
+---
+
+<Layout title={name.toUpperCase()}>
+  <div class="flex flex-col items-center justify-center py-16">
+    <span 
+      transition:name={`name-${slug}`} 
+      class:list={["text-format text-4xl lg:text-7xl py-8 lg:pt-6 lg:pb-12", className]}
+    >
+      {name}
+    </span>
+    <img 
+      transition:name={`image-${slug}`} 
+      src={url_image} 
+      alt={slug} 
+      class:list={["border-4 rounded-xl w-64 md:w-80 lg:w-[500px] aspect-square", className]}
+    >
+
+    <a 
+      class="text-format text-3xl lg:text-6xl py-12 text-green-500 transition hover:text-white hover:scale-110"
+      href={url_spotify}
+      target="_blank"
+      >escuchar en spotify</a>
+
+    <span class="text-format text-center text-3xl lg:text-6xl text-contrast py-6 lg:py-16 px-1" style="transform: rotate(-3deg);">canciones</span>
+    <ul class="w-full max-w-3xl mt-8 space-y-4">
+      {
+      songs.map((song) => (
+        <li class="text-center font-mono font-semibold text-xl lg:text-3xl p-4 rounded-lg transition duration-500 ease-in-out transform hover:scale-105">
+        {song}
+        </li>
+      ))
+      }
+    </ul>
+  </div>
+</Layout>

@@ -1,0 +1,48 @@
+---
+import Footer from '@components/Footer.astro'
+import Logo from '@icons/Logo.astro'
+import Title from '@icons/Title.astro'
+
+interface Props {
+  pages: {
+    name: string
+    href: string
+    target?: string
+  }[]
+}
+
+const { pages } = Astro.props
+---
+<>
+  <div class="flex justify-between items-center py-4 px-8 border-b-4 mb-12">
+    <Logo />
+    <Title class="scale-110 lg:scale-[1.40] absolute left-1/2 transform -translate-x-1/2 bg-top-black mt-[74px]" />
+    <button class="text-center text-4xl text-contrast transition font-medium px-2 hover:scale-125" onclick="closeMenuModal()">
+      ×
+    </button>
+  </div>
+  {
+    pages.map(({name, href, target}) => (
+    <a 
+      class="block py-10 text-2xl font-medium transition-all duration-300 rounded text-center text-contrast hover:bg-contrast hover:text-black" 
+      name={name}
+      href={href}
+      target={target}
+    >{name}</a>
+    ))
+  }
+  <Footer />
+</>
+
+<style>
+  div {
+    border-image: linear-gradient(to right, transparent, #ffd800, transparent) 5;
+  }
+</style>
+
+<script is:inline>
+  function closeMenuModal() {
+    const menuModal = document.getElementById('menu-modal')
+    menuModal.classList.replace('is-active', 'is-not-active')
+  }
+</script>
