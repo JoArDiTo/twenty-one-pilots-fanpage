@@ -12,7 +12,7 @@ Para clonar este repositorio y tener una copia local de la fan page, sigue estos
 
 ```bash
 git clone git@github.com:JoArDiTo/twenty-one-pilots-fanpage.git
-cd top-fanpage
+cd twenty-one-pilots-fanpage
 ```
 
 ## Motivo
