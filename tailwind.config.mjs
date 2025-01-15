@@ -10,7 +10,10 @@ export default {
 			},
 			backgroundImage: {
         "top-found": "url(/images/background-2.webp)",
-      }
+      },
+			fontFamily: {
+				'primary': ['"font-atomic"', 'system-ui'],
+			},
 		},
 	},
 	plugins: [],

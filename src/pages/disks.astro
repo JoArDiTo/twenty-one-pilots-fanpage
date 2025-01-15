@@ -4,9 +4,9 @@ import Disk from '@components/Disk.astro'
 import { disks, singles } from '@mocks/data.json'
 ---
 
-<Layout title="Twenty One Pilots FanPage">
-  <section class="flex flex-col justify-center items-center py-16 lg:py-20">
-    <span class="text-format text-contrast text-center pb-20 text-5xl lg:text-7xl" style="transform: rotate(-6deg);">sus<br>discos</span>
+<Layout title="Twenty One Pilots | FanPage | Discos">
+  <section class="flex flex-col justify-center items-center py-16 lg:py-20 font-primary">
+    <span class="text-contrast text-center pb-20 text-5xl lg:text-7xl" style="transform: rotate(-6deg);">sus<br>discos</span>
     <div class="flex flex-col justify-between max-w-7xl gap-y-8 lg:gap-y-16">
       {
         disks.map(({slug, name, url_image}) => (
@@ -16,8 +16,8 @@ import { disks, singles } from '@mocks/data.json'
     </div>
   </section>
 
-  <section class="flex flex-col justify-center py-10 lg:py-20">
-    <span class="text-format text-contrast text-center pb-16 text-5xl lg:text-7xl" style="transform: rotate(-6deg);">sus<br>sencillos</span>
+  <section class="flex flex-col justify-center py-10 lg:py-20 font-primary">
+    <span class="text-contrast text-center pb-16 text-5xl lg:text-7xl" style="transform: rotate(-6deg);">sus<br>sencillos</span>
     <div class="flex flex-col items-center gap-y-12">
       {
         singles.map(({name, url_image, url_spotify}) => (

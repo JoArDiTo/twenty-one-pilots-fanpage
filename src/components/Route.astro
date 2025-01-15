@@ -7,6 +7,7 @@ interface Props {
 
 const { name, href, target } = Astro.props
 const currentRoute = Astro.url.pathname
+console.log(currentRoute)
 const className = currentRoute === href ? 'bg-contrast' : 'hidden'
 ---
 <a 

@@ -21,7 +21,7 @@ const musicPlatforms = [
 ---
 
 <section class="flex flex-col justify-center items-center py-10 lg:py-20">
-  <span class="text-format text-center text-5xl lg:text-7xl text-contrast py-12" style="transform: rotate(-3deg);">disponible en</span>
+  <span class="font-primary text-center text-5xl lg:text-7xl text-contrast py-12" style="transform: rotate(-3deg);">disponible en</span>
   {
     musicPlatforms.map(({name, url, icon}, key) => (
       <MusicRoute name={name} url={url} icon={icon} />

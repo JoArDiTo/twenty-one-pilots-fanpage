@@ -25,27 +25,29 @@ export const prerender = true
 ---
 
 <Layout title={name.toUpperCase()}>
-  <div class="flex flex-col items-center justify-center py-16">
+  <section class="flex flex-col items-center justify-center py-16">
     <span 
       transition:name={`name-${slug}`} 
-      class:list={["text-format text-4xl lg:text-7xl py-8 lg:pt-6 lg:pb-12", className]}
+      class:list={["font-primary text-4xl lg:text-7xl py-6 lg:pt-6 lg:pb-12", className]}
     >
       {name}
     </span>
     <img 
-      transition:name={`image-${slug}`} 
-      src={url_image} 
-      alt={slug} 
-      class:list={["border-4 rounded-xl w-64 md:w-80 lg:w-[500px] aspect-square", className]}
+    transition:name={`image-${slug}`} 
+    src={url_image} 
+    alt={slug} 
+    class:list={["border-4 rounded-xl w-64 lg:w-[500px] aspect-square", className]}
     >
-
+    
+    <button class="text-lg py-3 lg:text-3xl font-bold pt-4 lg:pt-6 transition duration-300 hover:scale-125 hover:text-primary" onclick="history.back()">REGRESAR</button>
+    
     <a 
-      class="text-format text-3xl lg:text-6xl py-12 text-green-500 transition hover:text-white hover:scale-110"
+      class="font-primary text-3xl lg:text-6xl py-12 text-green-500 transition hover:text-white hover:scale-110"
       href={url_spotify}
       target="_blank"
       >escuchar en spotify</a>
 
-    <span class="text-format text-center text-3xl lg:text-6xl text-contrast py-6 lg:py-16 px-1" style="transform: rotate(-3deg);">canciones</span>
+    <span class="font-primary text-center text-3xl lg:text-6xl text-contrast py-6 lg:py-16 px-1" style="transform: rotate(-3deg);">canciones</span>
     <ul class="w-full max-w-3xl mt-8 space-y-4">
       {
       songs.map((song) => (
@@ -55,5 +57,5 @@ export const prerender = true
       ))
       }
     </ul>
-  </div>
+  </section>
 </Layout>

@@ -43,10 +43,10 @@ const currenttourToCome = toursToCome[0]
 
 const toursPassed = getConcertPassed(tours)
 ---
-<Layout title="Twenty One Pilots FanPage">
-  <div class="flex flex-col items-center justify-center pt-16">
-    <span class="text-format text-primary text-center pb-16 text-5xl lg:text-7xl" style="transform: rotate(-4deg);">clancy<br>world tour</span>
-    <h2 class="text-format text-white text-center py-8 lg:py-16 text-3xl lg:text-5xl">siguiente concierto</h2>
+<Layout title="Twenty One Pilots | FanPage | Tours">
+  <section class="flex flex-col items-center justify-center pt-16">
+    <span class="font-primary text-primary text-center pb-16 text-5xl lg:text-7xl" style="transform: rotate(-4deg);">clancy<br>world tour</span>
+    <h2 class="font-primary text-white text-center py-8 lg:py-16 text-3xl lg:text-5xl">siguiente concierto</h2>
     <div class="scale-150 py-6 lg:py-12">
       {
         <Tour 
@@ -58,7 +58,7 @@ const toursPassed = getConcertPassed(tours)
       }
     </div>
 
-    <h2 class="text-format text-white text-center pt-20 py-8 text-3xl lg:text-5xl">próximos conciertos</h2>
+    <h2 class="font-primary text-white text-center pt-20 py-8 text-3xl lg:text-5xl">próximos conciertos</h2>
     <div class="grid grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-12 max-w-7xl pb-20">
       {
         toursToCome.slice(1).map(({ date, site, city, region }) => (
@@ -67,7 +67,7 @@ const toursPassed = getConcertPassed(tours)
       }
     </div>
 
-    <h2 class="text-format text-white text-center pb-8 text-3xl lg:text-5xl">conciertos pasados</h2>
+    <h2 class="font-primaryt text-white text-center pb-8 text-3xl lg:text-5xl">conciertos pasados</h2>
     <div class="grid grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-12 max-w-7xl">
       {
         toursPassed.map(({ date, site, city, region }) => (
@@ -75,5 +75,5 @@ const toursPassed = getConcertPassed(tours)
         ))
       }
     </div>
-  </div>
+  </section>
 </Layout>
